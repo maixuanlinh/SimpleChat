@@ -4,10 +4,9 @@ var message = document.getElementById("message");
 var button = document.getElementById("send");
 var username = document.getElementById("username");
 var output = document.getElementById("output")
-
 button.addEventListener("click", function () {
     socket.emit("sendingMessage", {
-        message: message.messageValue,
+        message: message.value,
         username: username.value,
     });
 });
